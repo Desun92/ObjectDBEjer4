@@ -1,4 +1,4 @@
-package es.iestetuan.acv.vo;
+package es.iestetuan.acv.dao.vo;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;

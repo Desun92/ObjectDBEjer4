@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<t_color>
+  <color>
+    <cod_color>1</cod_color>
+    <cod_hexadecimal>Azul</cod_hexadecimal>
+    <nombre>#438dc0</nombre>
+  </color>
+  <color>
+    <cod_color>2</cod_color>
+    <cod_hexadecimal>Rojo</cod_hexadecimal>
+    <nombre>#fc3738</nombre>
+  </color>
+  <color>
+    <cod_color>3</cod_color>
+    <cod_hexadecimal>Amarillo</cod_hexadecimal>
+    <nombre>#fec128</nombre>
+  </color>
+  <color>
+    <cod_color>4</cod_color>
+    <cod_hexadecimal>Marrón</cod_hexadecimal>
+    <nombre>#741013</nombre>
+  </color>
+  <color>
+    <cod_color>5</cod_color>
+    <cod_hexadecimal>Verde</cod_hexadecimal>
+    <nombre>#83b41c</nombre>
+  </color>
+  <color>
+    <cod_color>6</cod_color>
+    <cod_hexadecimal>Gris</cod_hexadecimal>
+    <nombre>#939493</nombre>
+  </color>
+  <color>
+    <cod_color>7</cod_color>
+    <cod_hexadecimal>Naranja</cod_hexadecimal>
+    <nombre>#fd9924</nombre>
+  </color>
+  <color>
+    <cod_color>8</cod_color>
+    <cod_hexadecimal>Rosa</cod_hexadecimal>
+    <nombre>#f5418e</nombre>
+  </color>
+  <color>
+    <cod_color>9</cod_color>
+    <cod_hexadecimal>Morado</cod_hexadecimal>
+    <nombre>#8a026b</nombre>
+  </color>
+  <color>
+    <cod_color>10</cod_color>
+    <cod_hexadecimal>Azul marino</cod_hexadecimal>
+    <nombre>#09117e</nombre>
+  </color>
+  <color>
+    <cod_color>11</cod_color>
+    <cod_hexadecimal>Verde oscuro</cod_hexadecimal>
+    <nombre>#065a16</nombre>
+  </color>
+  <color>
+    <cod_color>12</cod_color>
+    <cod_hexadecimal>Verde oliva</cod_hexadecimal>
+    <nombre>#7f7f01</nombre>
+  </color>
+  <color>
+    <cod_color>13</cod_color>
+    <cod_hexadecimal>Blanco ramal</cod_hexadecimal>
+    <nombre>#ffffff</nombre>
+  </color>
+</t_color>

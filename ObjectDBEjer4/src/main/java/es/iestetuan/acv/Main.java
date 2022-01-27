@@ -1,15 +1,28 @@
 package es.iestetuan.acv;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-import es.iestetuan.acv.vo.Color;
+import es.iestetuan.acv.dao.vo.Color;
+import es.iestetuan.acv.utilidades.ParseoJackson;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		ObjectMapper mapper = new XmlMapper();
+		List<Color> listaColores = new ArrayList<Color>();
+		String hola = null;
+		
+		try {
+			hola = ParseoJackson.parseoColores();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println(hola);
+		
+		/*ObjectMapper mapper = new XmlMapper();
 		String xml = null;
 		
 		Color color1 = new Color();
@@ -32,7 +45,7 @@ public class Main {
 		}
 		catch(Exception e) {
 			e.printStackTrace();
-		}
+		}*/
 
 	}
 

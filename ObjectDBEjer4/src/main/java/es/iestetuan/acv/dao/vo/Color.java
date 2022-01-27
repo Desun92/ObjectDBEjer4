@@ -1,4 +1,4 @@
-package es.iestetuan.acv.vo;
+package es.iestetuan.acv.dao.vo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -54,5 +54,8 @@ public class Color {
 	public void setCodigoHexadecimal(String codigoHexadecimal) {
 		this.codigoHexadecimal = codigoHexadecimal;
 	}
-	
+	public String toString() {
+		return "Color [codigoColor=" + codigoColor + ", nombre=" + nombre + ", codigoHexadecimal=" + codigoHexadecimal
+				+ "]";
+	}
 }
