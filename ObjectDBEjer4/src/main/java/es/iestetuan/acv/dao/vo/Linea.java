@@ -36,9 +36,8 @@ public class Linea {
 	@Column(name="nombre_largo")
 	private String nombreLargo;
 	
-	//@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	//@JoinColumn(name="cod_color", foreignKey = @ForeignKey(name="fk_color"))
-	@Column(name="color")
+	@OneToOne
+	@JoinColumn(name="cod_color", foreignKey = @ForeignKey(name="fk_color"))
 	private Color color;
 	
 	@Column(name="kilometros")
