@@ -8,7 +8,6 @@ import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 
 import es.iestetuan.acv.dao.IBaseDeDatos;
-import es.iestetuan.acv.dao.vo.Color;
 import es.iestetuan.acv.dao.vo.Linea;
 import es.iestetuan.acv.utilidades.GestorEntityManagerJPA;
 
@@ -30,6 +29,9 @@ public class LineaJPA implements IBaseDeDatos<Linea> {
 		catch(Exception e) {
 			e.printStackTrace();
 		}
+		finally {
+			entityManager.close();
+		}
 	}
 
 	public void modificar(Linea entidad) {
@@ -46,6 +48,9 @@ public class LineaJPA implements IBaseDeDatos<Linea> {
 		}
 		catch(Exception e) {
 			e.printStackTrace();
+		}
+		finally {
+			entityManager.close();
 		}
 	}
 
@@ -66,6 +71,9 @@ public class LineaJPA implements IBaseDeDatos<Linea> {
 		catch(Exception e) {
 			e.printStackTrace();
 		}
+		finally {
+			entityManager.close();
+		}
 	}
 
 	public Linea consultarPorID(int codEntidad, Class<Linea> clase) {
@@ -83,18 +91,20 @@ public class LineaJPA implements IBaseDeDatos<Linea> {
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-		
+		finally {
+			entityManager.close();
+		}
 		return linea;
 	}
 
-	public List<Linea> consultarLista(Class<Linea> clase) {
+	public List<Linea> consultarLista() {
 		
 		List<Linea> listaLineas = null;
 		
 		try {
 			entityManager=GestorEntityManagerJPA.getEntityManager();
 			
-			String sentenciaJPQL="SELECT color FROM Color color";
+			String sentenciaJPQL="Select linea FROM Linea linea";
 			
 			TypedQuery<Linea> query =entityManager.createQuery(sentenciaJPQL, Linea.class);
 			
@@ -105,6 +115,9 @@ public class LineaJPA implements IBaseDeDatos<Linea> {
         }
 		catch(Exception e) {
 			e.printStackTrace();
+		}
+		finally {
+			entityManager.close();
 		}
 		return listaLineas;
 	}

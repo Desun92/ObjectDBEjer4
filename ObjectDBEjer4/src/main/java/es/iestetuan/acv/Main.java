@@ -1,6 +1,7 @@
 package es.iestetuan.acv;
 
 import java.io.IOException;
+import java.util.List;
 
 import es.iestetuan.acv.dao.jpa.ColorJPA;
 import es.iestetuan.acv.dao.jpa.LineaJPA;
@@ -27,7 +28,7 @@ public class Main {
 		
 		/*for(Color color : colores) {
 			gestionColores.crear(color);
-		}*/
+		}
 		
 		for(LineaXML lineaxml : lineaXml) {
 			Linea linea = new Linea();
@@ -39,7 +40,14 @@ public class Main {
 			linea.setUrl(lineaxml.getUrl());
 			linea.setImagen(linea.getUrl().getBytes());
 			gestionLineas.crear(linea);
-		}
+		}*/
+		
+		/*List<Linea> listaLineas = null;
+		listaLineas=gestionLineas.consultarLista();
+		
+		for(Linea linea : listaLineas) {
+			System.out.println(linea);
+		}*/
 		
 	}
 

@@ -1,6 +1,5 @@
 package es.iestetuan.acv.dao.jpa;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -87,7 +86,7 @@ public class ColorJPA implements IBaseDeDatos<Color>{
 		return color;
 	}
 
-	public List<Color> consultarLista(Class<Color> clase) {
+	public List<Color> consultarLista() {
 		
 		List<Color> listaColores = null;
 		
