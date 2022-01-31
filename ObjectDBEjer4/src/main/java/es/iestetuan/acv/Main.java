@@ -1,9 +1,8 @@
 package es.iestetuan.acv;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
+import es.iestetuan.acv.dao.jpa.ColorJPA;
 import es.iestetuan.acv.dao.vo.Color;
 import es.iestetuan.acv.utilidades.ParseoJackson;
 
@@ -11,16 +10,19 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		List<Color> listaColores = new ArrayList<Color>();
-		String hola = null;
+		ColorJPA gestionColores = new ColorJPA();
+		Color[] colores=null;
 		
 		try {
-			hola = ParseoJackson.parseoColores();
+			colores  = ParseoJackson.parseoColores();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
-		System.out.println(hola);
+		for(Color color : colores) {
+			System.out.println(color);
+			//gestionColores.crear(color);
+		}
 		
 		/*ObjectMapper mapper = new XmlMapper();
 		String xml = null;

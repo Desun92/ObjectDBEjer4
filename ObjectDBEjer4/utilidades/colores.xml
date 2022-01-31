@@ -2,67 +2,67 @@
 <t_color>
   <color>
     <cod_color>1</cod_color>
-    <cod_hexadecimal>Azul</cod_hexadecimal>
-    <nombre>#438dc0</nombre>
+    <nombre>Azul</nombre>
+    <cod_hexadecimal>#438dc0</cod_hexadecimal>
   </color>
   <color>
     <cod_color>2</cod_color>
-    <cod_hexadecimal>Rojo</cod_hexadecimal>
-    <nombre>#fc3738</nombre>
+    <nombre>Rojo</nombre>
+    <cod_hexadecimal>#fc3738</cod_hexadecimal>
   </color>
   <color>
     <cod_color>3</cod_color>
-    <cod_hexadecimal>Amarillo</cod_hexadecimal>
-    <nombre>#fec128</nombre>
+    <nombre>Amarillo</nombre>
+    <cod_hexadecimal>#fec128</cod_hexadecimal>
   </color>
   <color>
     <cod_color>4</cod_color>
-    <cod_hexadecimal>Marrón</cod_hexadecimal>
-    <nombre>#741013</nombre>
+    <nombre>Marrón</nombre>
+    <cod_hexadecimal>#741013</cod_hexadecimal>
   </color>
   <color>
     <cod_color>5</cod_color>
-    <cod_hexadecimal>Verde</cod_hexadecimal>
-    <nombre>#83b41c</nombre>
+    <nombre>Verde</nombre>
+    <cod_hexadecimal>#83b41c</cod_hexadecimal>
   </color>
   <color>
     <cod_color>6</cod_color>
-    <cod_hexadecimal>Gris</cod_hexadecimal>
-    <nombre>#939493</nombre>
+    <nombre>Gris</nombre>
+    <cod_hexadecimal>#939493</cod_hexadecimal>
   </color>
   <color>
     <cod_color>7</cod_color>
-    <cod_hexadecimal>Naranja</cod_hexadecimal>
-    <nombre>#fd9924</nombre>
+    <nombre>Naranja</nombre>
+    <cod_hexadecimal>#fd9924</cod_hexadecimal>
   </color>
   <color>
     <cod_color>8</cod_color>
-    <cod_hexadecimal>Rosa</cod_hexadecimal>
-    <nombre>#f5418e</nombre>
+    <nombre>Rosa</nombre>
+    <cod_hexadecimal>#f5418e</cod_hexadecimal>
   </color>
   <color>
     <cod_color>9</cod_color>
-    <cod_hexadecimal>Morado</cod_hexadecimal>
-    <nombre>#8a026b</nombre>
+    <nombre>Morado</nombre>
+    <cod_hexadecimal>#8a026b</cod_hexadecimal>
   </color>
   <color>
     <cod_color>10</cod_color>
-    <cod_hexadecimal>Azul marino</cod_hexadecimal>
-    <nombre>#09117e</nombre>
+    <nombre>Azul marino</nombre>
+    <cod_hexadecimal>#09117e</cod_hexadecimal>
   </color>
   <color>
     <cod_color>11</cod_color>
-    <cod_hexadecimal>Verde oscuro</cod_hexadecimal>
-    <nombre>#065a16</nombre>
+    <nombre>Verde oscuro</nombre>
+    <cod_hexadecimal>#065a16</cod_hexadecimal>
   </color>
   <color>
     <cod_color>12</cod_color>
-    <cod_hexadecimal>Verde oliva</cod_hexadecimal>
-    <nombre>#7f7f01</nombre>
+    <nombre>Verde oliva</nombre>
+    <cod_hexadecimal>#7f7f01</cod_hexadecimal>
   </color>
   <color>
     <cod_color>13</cod_color>
-    <cod_hexadecimal>Blanco ramal</cod_hexadecimal>
-    <nombre>#ffffff</nombre>
+    <nombre>Blanco ramal</nombre>
+    <cod_hexadecimal>#ffffff</cod_hexadecimal>
   </color>
 </t_color>

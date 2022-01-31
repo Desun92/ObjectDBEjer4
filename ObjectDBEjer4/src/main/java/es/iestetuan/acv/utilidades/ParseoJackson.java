@@ -11,18 +11,24 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 import es.iestetuan.acv.dao.vo.Color;
 import es.iestetuan.acv.dao.vo.Linea;
+import es.iestetuan.acv.procesamiento.LineaXML;
 
 public class ParseoJackson {
-
-	public static void parseoLineas(List<Linea> listaLineas) {
+	
+	public static LineaXML[] parseoLineas(List<Linea> listaLineas) throws IOException {
 		
+		ObjectMapper mapper = new XmlMapper();
+		String listaLineasString = Files.readString(Paths.get(GestorConfiguracion.getInfoConfiguracion("ruta.xml.lineas")));
+		LineaXML[] lineaXML = mapper.readValue(listaLineasString, LineaXML[].class);
+		return lineaXML;
 	}
 	
-	public static String parseoColores() throws IOException {
+	public static Color[] parseoColores() throws IOException {
 		
 		ObjectMapper mapper = new XmlMapper();
 		String listaColoresString = Files.readString(Paths.get(GestorConfiguracion.getInfoConfiguracion("ruta.xml.colores")), StandardCharsets.UTF_8);
-		return listaColoresString;
+		Color[] color = mapper.readValue(listaColoresString, Color[].class);
+		return color;
 
 	}
 	

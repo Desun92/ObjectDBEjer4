@@ -28,13 +28,13 @@ public class Color {
 	@JacksonXmlProperty(isAttribute=true, localName="cod_color")
 	private int codigoColor;
 	
-	@Column(name="nombre")
-	@JacksonXmlProperty(localName="nombre")
-	private String nombre;
-	
 	@Column(name="cod_hexadecimal")
 	@JacksonXmlProperty(localName="cod_hexadecimal")
 	private String codigoHexadecimal;
+	
+	@Column(name="nombre")
+	@JacksonXmlProperty(localName="nombre")
+	private String nombre;
 	
 	public int getCodigoColor() {
 		return codigoColor;
@@ -42,20 +42,22 @@ public class Color {
 	public void setCodigoColor(int codigoColor) {
 		this.codigoColor = codigoColor;
 	}
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
 	public String getCodigoHexadecimal() {
 		return codigoHexadecimal;
 	}
 	public void setCodigoHexadecimal(String codigoHexadecimal) {
 		this.codigoHexadecimal = codigoHexadecimal;
 	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	@Override
 	public String toString() {
-		return "Color [codigoColor=" + codigoColor + ", nombre=" + nombre + ", codigoHexadecimal=" + codigoHexadecimal
+		return "Color [codigoColor=" + codigoColor + ", codigoHexadecimal=" + codigoHexadecimal + ", nombre=" + nombre
 				+ "]";
 	}
+	
 }
