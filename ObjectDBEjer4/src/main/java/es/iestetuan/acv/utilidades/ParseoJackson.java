@@ -15,7 +15,7 @@ import es.iestetuan.acv.procesamiento.LineaXML;
 
 public class ParseoJackson {
 	
-	public static LineaXML[] parseoLineas(List<Linea> listaLineas) throws IOException {
+	public static LineaXML[] parseoLineas() throws IOException {
 		
 		ObjectMapper mapper = new XmlMapper();
 		String listaLineasString = Files.readString(Paths.get(GestorConfiguracion.getInfoConfiguracion("ruta.xml.lineas")));

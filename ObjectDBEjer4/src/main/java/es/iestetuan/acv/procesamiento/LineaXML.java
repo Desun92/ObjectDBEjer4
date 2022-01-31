@@ -70,4 +70,10 @@ public class LineaXML {
 		this.url = url;
 	}
 
+	@Override
+	public String toString() {
+		return "LineaXML [codigoLinea=" + codigoLinea + ", nombreCorto=" + nombreCorto + ", nombreLargo=" + nombreLargo
+				+ ", color=" + color + ", kilometros=" + kilometros + ", url=" + url + "]";
+	}
+
 }

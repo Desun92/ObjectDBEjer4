@@ -2,34 +2,111 @@ package es.iestetuan.acv.dao.jpa;
 
 import java.util.List;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.NoResultException;
+import javax.persistence.TypedQuery;
+
 import es.iestetuan.acv.dao.IBaseDeDatos;
+import es.iestetuan.acv.dao.vo.Color;
 import es.iestetuan.acv.dao.vo.Linea;
+import es.iestetuan.acv.utilidades.GestorEntityManagerJPA;
 
 public class LineaJPA implements IBaseDeDatos<Linea> {
+	
+	private EntityManager entityManager;
 
 	public void crear(Linea entidad) {
-		// TODO Auto-generated method stub
-		
+		EntityTransaction transaccion=null;
+		try {
+			entityManager=GestorEntityManagerJPA.getEntityManager();
+			transaccion=entityManager.getTransaction();
+			transaccion.begin();
+			
+			entityManager.persist(entidad);
+            
+            transaccion.commit();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void modificar(Linea entidad) {
-		// TODO Auto-generated method stub
-		
+		EntityTransaction transaccion=null;
+		try {
+			entityManager=GestorEntityManagerJPA.getEntityManager();
+			transaccion=entityManager.getTransaction();
+			transaccion.begin();
+			
+			if(!entityManager.contains(entidad))
+				entidad=entityManager.merge(entidad);
+            
+            transaccion.commit();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void borrar(Linea entidad) {
-		// TODO Auto-generated method stub
-		
+		EntityTransaction transaccion=null;
+		try {
+			entityManager=GestorEntityManagerJPA.getEntityManager();
+			transaccion=entityManager.getTransaction();
+			transaccion.begin();
+			
+			if(!entityManager.contains(entidad))
+				entidad=entityManager.merge(entidad);
+			
+			entityManager.remove(entidad);
+            
+            transaccion.commit();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public Linea consultarPorID(int codEntidad, Class<Linea> clase) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Linea linea = new Linea();
+		
+		try {
+			entityManager=GestorEntityManagerJPA.getEntityManager();
+			
+			linea = entityManager.find(Linea.class, codEntidad);
+		}
+		catch (NoResultException e) {
+        	linea =null;            
+        }
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return linea;
 	}
 
 	public List<Linea> consultarLista(Class<Linea> clase) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Linea> listaLineas = null;
+		
+		try {
+			entityManager=GestorEntityManagerJPA.getEntityManager();
+			
+			String sentenciaJPQL="SELECT color FROM Color color";
+			
+			TypedQuery<Linea> query =entityManager.createQuery(sentenciaJPQL, Linea.class);
+			
+			listaLineas=query.getResultList();
+		}
+		catch (NoResultException e) {
+        	listaLineas =null;            
+        }
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return listaLineas;
 	}
 
 

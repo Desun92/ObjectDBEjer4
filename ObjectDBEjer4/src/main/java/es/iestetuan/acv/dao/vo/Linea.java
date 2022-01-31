@@ -36,8 +36,9 @@ public class Linea {
 	@Column(name="nombre_largo")
 	private String nombreLargo;
 	
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinColumn(name="cod_color", foreignKey = @ForeignKey(name="fk_color"))
+	//@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	//@JoinColumn(name="cod_color", foreignKey = @ForeignKey(name="fk_color"))
+	@Column(name="color")
 	private Color color;
 	
 	@Column(name="kilometros")
@@ -80,6 +81,18 @@ public class Linea {
 	}
 	public void setKilometros(float kilometros) {
 		this.kilometros = kilometros;
+	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	public byte[] getImagen() {
+		return imagen;
+	}
+	public void setImagen(byte[] imagen) {
+		this.imagen = imagen;
 	}
 	@Override
 	public String toString() {
